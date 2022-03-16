@@ -1,0 +1,20 @@
+
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <h2>Test Formulaire</h2>
+  <div class="form-group">
+    <label>Nom d'utilisateur</label><br>
+    <input type="text" class="col-sm-2" formControlName="username">
+  </div>
+  <br>
+  <div class="form-group">
+    <label>Mot de passe</label><br>
+    <input type="password" class="col-sm-2" formControlName="password">
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary">OK</button>
+
+</form>
+
+<pre>
+  {{ loginForm.value | json }}
+</pre>
